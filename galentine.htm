@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Galentine?</title>
+
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #7B0323; /* Dark red background */
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #7B0323; /* Ensure header is also red */
+            padding: 50px 20px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+        /* Message Section */
+        .message {
+            padding: 40px 20px;
+            background-color: #7B0323; /* Change background to match red */
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            color: #ff1493; /* You can leave this pink if you'd like for the text */
+        }
+
+        .highlight {
+            color: #ff6347;
+        }
+
+        /* Button Styles */
+        button {
+            padding: 15px 30px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s ease;
+            background-color: silver; /* Silver buttons */
+        }
+
+        #yes-btn {
+            background-color: silver;
+            color: black;
+        }
+
+        #no-btn {
+            background-color: silver;
+            color: black;
+        }
+
+        /* Button Growth */
+        .grow {
+            transform: scale(1.2);
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #7B0323; /* Keep footer background red */
+            padding: 10px;
+            color: white;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Be My Galentine?</h1>
+    </header>
+
+    <section class="message">
+        <h2>I love you so much!</h2>
+        <!-- Add a cute GIF -->
+<iframe src="https://giphy.com/embed/tpVKvAabWt3G5csMkT" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/frog-toad-fric-tpVKvAabWt3G5csMkT">via GIPHY</a></p>
+
+        <p>Please please be my galentine!!!</p>
+        
+        <div>
+            <button id="yes-btn" onclick="yesClicked()">Yes!</button>
+            <button id="no-btn" onclick="noClicked()">No</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>💖 Love, linnie</p>
+    </footer>
+
+    <!-- Inline JavaScript -->
+    <script>
+        let noButton = document.getElementById("no-btn");
+        let yesButton = document.getElementById("yes-btn");
+
+        let noResponses = [
+            "Are you sure?",
+            "Really sure??",
+            "Are you positive?",
+            "Pookie please...",
+            "Just think about it!",
+            "If you say no, I will be really sad...",
+            "I will be very sad...",
+            "I will be very very very sad...",
+            "Ok fine, I will stop asking...",
+            "Just kidding, say yes please! ❤️"
+        ];
+
+        let noCounter = 0;  // To track how many times 'No' has been clicked
+
+        // Function for when 'No' is clicked
+        function noClicked() {
+            if (noCounter < noResponses.length) {
+                noButton.innerText = noResponses[noCounter];  // Change the text
+                noCounter++;
+            }
+        }
+
+        // Function for when 'Yes' is clicked
+        function yesClicked() {
+            // Redirect to the new page with a message
+            window.location.href = "yes.htm"; // Redirect to another page
+        }
+    </script>
+</body>
+</html>
